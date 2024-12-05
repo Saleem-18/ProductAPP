@@ -64,7 +64,7 @@ const CarForm = () => {
 
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.post(`${apiBaseUrl}/api/cars/add`, formData, {
+      const res = await axios.post(`https://de-sol-mern-backend.vercel.app/api/cars/add`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           "x-auth-token": token,

@@ -24,7 +24,7 @@ const LoginForm = () => {
 
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
-      const res = await axios.post(`${apiBaseUrl}/api/auth/login`, values);
+      const res = await axios.post(`https://de-sol-mern-backend.vercel.app/api/auth/login`, values);
       localStorage.setItem("token", res.data.token);
       Swal.fire({
         title: "Success!",
